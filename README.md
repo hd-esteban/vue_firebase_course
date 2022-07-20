@@ -1,1 +1,1 @@
-# vue_firebase_course
+# Vue + Firebase
