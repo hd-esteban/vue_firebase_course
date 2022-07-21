@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue Basics</title>
+    <meta charset="utf-8">
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        * {
+            font-family: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vue Basics - Exercise 5</h1>
+    <div id="app">
+        <h2>I earn {{ wage }} pesos per hour.</h2>
+        <hr />
+        <h4>Increase using v-on:click and affecting the property directly</h4>
+        <button v-on:click="wage++">Increase</button>
+        <button v-on:click="wage--">Decrease</button>
+        <hr />
+        <h4>Increase using v-on:dblclick and affecting the property through the method changeWage</h4>
+        <button v-on:dblclick="changeWage(1)">Increase</button>
+        <button v-on:dblclick="changeWage(-1)">Decrease</button>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

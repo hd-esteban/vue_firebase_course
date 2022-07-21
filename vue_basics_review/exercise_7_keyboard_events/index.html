@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue Basics</title>
+    <meta charset="utf-8">
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        * {
+            font-family: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vue Basics - Exercise 7</h1>
+    <div id="app">
+        <h2>Keyboard events</h2>
+        <hr />
+        Current name: {{ name }}
+        <h4>Key press event doesn't register the new value when the key is pressed</h4>
+        <input type="text" @keypress="updateName" />
+        <h4>Key up event registers the new value when the key is released</h4>
+        <input type="text" @keyup="updateName" />
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

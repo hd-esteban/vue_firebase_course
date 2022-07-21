@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue Basics</title>
+    <meta charset="utf-8">
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        * {
+            font-family: Arial;
+        }
+        .one {
+            color: green;
+        }
+        .two {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vue Basics - Exercises 1 to 4</h1>
+    <h4>{{ title }} -> It doesn't work because it is out of the scope of what Vue JS is controlling.</h4>
+    <div id="app">
+        <h4>{{ title }} -> It works because it is within the scope of the HTML element that is controlled by
+            VueJS.</h4>
+        <p>{{ greet('morning') }}</p>
+        <a href="url">YouTube</a>
+        This link doesn't work because it has {{ url }} set as the HREF and HMTL take this value as
+        an string because it expects to receive strings for all the HTML attributes.
+        <hr />
+        <a v-bind:href="url">YouTube</a>
+        To avoid this from happening, we need to pass the value as a binded property using the v-bind
+        directive, like this: v-bind:href, it could be also used as :href, without the directive name.
+        <hr/>
+        <div v-bind:class="classes">Classes from instance, even the classes is an array Vue knows that classes must be printed one after the other.</div>
+        <hr />
+        <input type="text" :value="name">
+        v-bind is not a double bind directive
+        <hr />
+        <input type="text" v-model:value="lastName">
+        v-model is a double bind directive
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
